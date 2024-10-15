@@ -1,0 +1,36 @@
+version: 2
+
+sources:
+  - name: public
+    schema: public
+    description: "Source data for medical businesses scraped from Telegram channels."
+    tables:
+      - name: cleaned_telegram_data
+        description: "Raw Telegram data containing channel and message information for medical businesses."
+      
+models:
+  - name: raw_telegram_data
+    description: "Table containing raw Telegram data."
+    columns:
+      - name: channel_title
+        description: "The title of the channel."
+        tests:
+          - not_null
+          
+      - name: channel_username
+        description: "The username of the channel."
+        tests:
+          - not_null
+
+  - name: transform_data
+    description: "Table containing transformed data."
+    columns:
+      - name: channel_id
+        description: "The ID of the channel linked to the contact number."
+        tests:
+          - not_null
+          
+      - name: message_date
+        description: "The date when the message was sent or received."
+        tests:
+          - not_null
