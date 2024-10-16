@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Retrieval Results</title>
+    <link rel="stylesheet" href="/static/style.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <h1>Retrieved Data</h1>
+    <table>
+        <tr>
+            <th>Message ID</th>
+            <th>Message Date</th>
+            <th>Final Message Text</th>
+            <th>Media Path</th>
+            <th>Has Media</th>
+        </tr>
+        {% for message in messages %}
+        <tr>
+            <td>{{ message.message_id }}</td>
+            <td>{{ message.message_date }}</td>
+            <td>{{ message.final_message_text }}</td>
+            <td>{{ message.media_path }}</td>
+            <td>{{ message.has_media }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Go Back</a>
+</body>
+</html>

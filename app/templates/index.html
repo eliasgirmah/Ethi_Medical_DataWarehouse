@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Retrieval Form</title>
+    <link rel="stylesheet" href="/static/style.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <h1>Health Data Warehouse </h1>
+    <h2>Retrieve Data from Database</h2>
+    <form action="/retrieve_data" method="post">
+        <label for="start_date">Start Date:</label>
+        <input type="date" id="start_date" name="start_date" required>
+        
+        <label for="end_date">End Date:</label>
+        <input type="date" id="end_date" name="end_date" required>
+        
+        <button type="submit">Retrieve Data</button>
+    </form>
+</body>
+</html>

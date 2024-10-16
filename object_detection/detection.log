@@ -1,0 +1,3 @@
+2024-10-13 20:25:16,536 - INFO - YOLOv5 model loaded successfully.
+2024-10-13 20:25:16,560 - INFO - Database connection established and detections table created.
+2024-10-13 20:25:16,560 - ERROR - An error occurred: [WinError 3] The system cannot find the path specified: '../images'
